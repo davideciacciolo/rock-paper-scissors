@@ -39,10 +39,10 @@ Layout
 
 nav {
     /* Layout */
-    padding: 10px;
     width: 100%;
     /* Appearance */
     background-color: #55f;
+    box-shadow: 0px 0px 8px #0008;
 }
 
 div#game-area {
@@ -50,17 +50,44 @@ div#game-area {
     display: flex;
     flex-flow: column nowrap;
     flex-grow: 1;
-    margin-top: 24px;
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 div.gamearea-section {
     /* Layout */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
     flex-grow: 1;
+}
+
+div#core {
+    /* Layout */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    flex-grow: 2;
+}
+
+div#core > #battle-div {
+    /* Layout */
+    flex-grow: 1;
+    /* Text */
+    text-align: center;
+}
+
+div#core > .points-div {
+    /* Layout */
+    width: 125px;
+    margin: 0 20px;
 }
 
 div#player-section {
     /* Layout */
     display: flex;
+    padding: 0 64px;
     flex-flow: row nowrap;
 }
 
@@ -72,7 +99,7 @@ Typography
 
 h1 {
     /* Layout */
-    margin: 0;
+    margin: 8px 12px;
     /* Text */
     font-size: 36px;
 }
@@ -83,7 +110,7 @@ Components
 ==========
 */
 
-div.card {
+.card {
     /* Layout */
     display: flex;
     flex-flow: column nowrap;
@@ -95,12 +122,22 @@ div.card {
     /* Text */
     font-weight: bold;
     /* Appearance */
-    border: 5px solid #e06200;
     border-radius: 8px;
+}
+
+.opponent-card {
+    /* Appearance */
+    border: 5px solid #a90000;
+    background-color: #d80000;
+}
+
+.player-card {
+    /* Appearance */
+    border: 5px solid #e06200;
     background-color: #ff7000;
 }
 
-div.player-card:hover {
+.player-card:hover {
     /* Appearance */
     cursor: pointer;
     box-shadow: 0px 2px 4px #000;

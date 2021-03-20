@@ -7,13 +7,25 @@
     </head>
     <body>
         <nav>
-            <h1>Rock, Paper, Scissors!</h1>
+            <h1 id="nav-title">Rock, Paper, Scissors!</h1>
         </nav>
         <div id="game-area">
             <div id="opponent-section" class="gamearea-section">
-                <div class="card">?</div>
+                <div class="card opponent-card">?</div>
             </div>
-            <div id="battle-section" class="gamearea-section">Battlefield</div>
+            <div id="core" class="gamearea-section">
+                <div id=" playerpoints-div" class="points-div core-div">
+                    <h2>Your Points</h2>
+                    <p id="player-points" class="points">0 / 3</p>
+                </div>
+                <div id="battle-div" class="core-div">
+                    <h2>BATTLEFIELD</h2>
+                </div>
+                <div ID=" opponentpoints-div" class="points-div core-div">
+                    <h2>Opponent Points</h2>
+                    <p id="opponent-points" class="points">0 / 3</p>
+                </div>
+            </div>
             <div id="player-section" class="gamearea-section">
                 <div class="card player-card">ROCK</div>
                 <div class="card player-card">PAPER</div>
